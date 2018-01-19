@@ -1,3 +1,8 @@
+/*
+ * Created: 2018.01
+ * Author: Maxim Molchanov <m.molchanov@vonmo.com>
+ */
+
 package services
 
 import (
@@ -34,7 +39,7 @@ func init() {
 }
 
 func (srv *ACounter) start() {
-	waitCore()
+	core.WaitCore()
 	srv.Ready = true
 	srv.ShutdownFun = func(reason string) {
 		log.Debug("acounter: soft shutdown")
