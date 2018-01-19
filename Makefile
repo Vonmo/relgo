@@ -8,8 +8,6 @@ ifeq ($(DOCKER_COMPOSE),)
 $(error "DockerCompose not available on this system")
 endif
 
-WORK_DIR:=/root/go/src/github.com/Vonmo/relgo
-
 all: build_imgs up test rel
 
 build_imgs: cache_soft
@@ -29,28 +27,28 @@ down:
 
 test:
 	@echo "Testing..."
-	@${DOCKER_COMPOSE} exec test bash -c "cd ${WORK_DIR} && make -f docker.mk test"
+	@${DOCKER_COMPOSE} exec test bash -c "cd /root/go/src/github.com/Vonmo/relgo && make -f docker.mk test"
 
 rel:
 	@echo "Build release..."
-	@${DOCKER_COMPOSE} exec test bash -c "cd ${WORK_DIR} && make -f docker.mk prod"
+	@${DOCKER_COMPOSE} exec test bash -c "cd /root/go/src/github.com/Vonmo/relgo && make -f docker.mk prod"
 
 run:
 	@echo "Run..."
-	@${DOCKER_COMPOSE} exec test bash -c "cd ${WORK_DIR} && make -f docker.mk run"
+	@${DOCKER_COMPOSE} exec test bash -c "cd /root/go/src/github.com/Vonmo/relgo && make -f docker.mk run"
 
 format_code:
 	@echo "Fmt..."
-	@${DOCKER_COMPOSE} exec test bash -c "cd ${WORK_DIR} && make -f docker.mk fmt"
+	@${DOCKER_COMPOSE} exec test bash -c "cd /root/go/src/github.com/Vonmo/relgo && make -f docker.mk fmt"
 
 deps:
 	@echo "Checking deps..."
-	@${DOCKER_COMPOSE} exec test bash -c "cd ${WORK_DIR} && make -f docker.mk dep"
+	@${DOCKER_COMPOSE} exec test bash -c "cd /root/go/src/github.com/Vonmo/relgo && make -f docker.mk dep"
 
 new_migration:
 	@echo "Create migration..."
-	@${DOCKER_COMPOSE} exec test bash -c "cd ${WORK_DIR} && make -f docker.mk new_migration n=$n"
+	@${DOCKER_COMPOSE} exec test bash -c "cd /root/go/src/github.com/Vonmo/relgo && make -f docker.mk new_migration n=$n"
 
 migrate:
 	@echo "Migrate..."
-	@${DOCKER_COMPOSE} exec test bash -c "cd ${WORK_DIR} && make -f docker.mk migrate"
+	@${DOCKER_COMPOSE} exec test bash -c "cd /root/go/src/github.com/Vonmo/relgo && make -f docker.mk migrate"
