@@ -1,0 +1,12 @@
+[[constraint]]
+  branch = "v2"
+  name = "gopkg.in/yaml.v2"
+[[constraint]]
+  branch = "master"
+  name = "github.com/satori/go.uuid"
+[[constraint]]
+  name = "github.com/gorilla/mux"
+  branch = "master"
+[[constraint]]
+  name = "github.com/gorilla/handlers"
+  version = "1.2.1"

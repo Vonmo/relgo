@@ -1,0 +1,35 @@
+node:
+    name: dev1
+    dc: dc1
+    rack: r1
+
+runtime:
+    maxprocs: 2
+
+dirs:
+    tmp: ./tmp
+    data: ./tmp/data
+
+log:
+    destination: stdout
+    level: debug
+
+metrics:
+    destination: ./tmp/metrics
+    interval_ms: 1000
+
+data_sources:
+    db:
+        connect: user=acounter password=OPahjah0Oosooth host=db port=5432 dbname=acounter sslmode=disable
+        pool_max_connections: 150
+        pool_max_idle_connections: 10
+
+services:
+    acounter:
+        enabled: true
+        socket:
+            proto: http
+            host: 0.0.0.0
+            port: 4598
+            path: /
+

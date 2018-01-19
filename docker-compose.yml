@@ -1,0 +1,33 @@
+version: '3.2'
+services:
+
+  base:
+    build: imgs/base
+  postgres:
+    build: imgs/postgres
+
+  db:
+    image: relgo_postgres:latest
+    depends_on:
+      - postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=OPahjah0Oosooth
+      - PGDATA=/var/lib/postgresql/data
+      - PROJECT_DB=acounter
+      - PROJECT_USER=acounter
+    expose:
+      - 5432
+    ports:
+      - 5433:5432
+
+  test:
+    image: relgo_base:latest
+    depends_on:
+      - base
+    volumes:
+      - "./:/root/go/src/github.com/elzor/relgo:Z"
+    expose:
+      - 4598
+    ports:
+      - 4598:4598
