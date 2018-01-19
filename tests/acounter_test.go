@@ -7,9 +7,9 @@ package tests
 
 import (
 	"encoding/json"
-	"github.com/elzor/relgo/core"
-	"github.com/elzor/relgo/lib"
-	"github.com/elzor/relgo/services"
+	"github.com/Vonmo/relgo/core"
+	"github.com/Vonmo/relgo/lib"
+	"github.com/Vonmo/relgo/services"
 	"io/ioutil"
 	"net/http"
 	"strconv"

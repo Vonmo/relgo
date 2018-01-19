@@ -28,7 +28,7 @@ prod: build optimize
 
 build:
 	@echo "Building..."
-	@CGO_ENABLED=1 GOOS=linux GOARCH=amd64 packr build -p 2 -ldflags "-s -w -X github.com/elzor/relgo/config.Version=${RELEASE} -X github.com/elzor/relgo/config.Commit=${COMMIT} -X github.com/elzor/relgo/config.BuildTime=${BUILD_TIME} -X github.com/elzor/relgo/config.BuilderName=${BUILDER_NAME} -X github.com/elzor/relgo/config.BuildMachine=${BUILD_MACHINE}" -o ./bin/${RELNAME}
+	@CGO_ENABLED=1 GOOS=linux GOARCH=amd64 packr build -p 2 -ldflags "-s -w -X github.com/Vonmo/relgo/config.Version=${RELEASE} -X github.com/Vonmo/relgo/config.Commit=${COMMIT} -X github.com/Vonmo/relgo/config.BuildTime=${BUILD_TIME} -X github.com/Vonmo/relgo/config.BuilderName=${BUILDER_NAME} -X github.com/Vonmo/relgo/config.BuildMachine=${BUILD_MACHINE}" -o ./bin/${RELNAME}
 	@chmod a+rwx ./bin/${RELNAME}
 
 optimize:

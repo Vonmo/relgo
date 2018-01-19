@@ -6,10 +6,10 @@ package core
 
 import (
 	"fmt"
-	"github.com/elzor/relgo/config"
-	"github.com/elzor/relgo/log"
-	"github.com/elzor/relgo/metrics"
-	"github.com/elzor/relgo/models"
+	"github.com/Vonmo/relgo/config"
+	"github.com/Vonmo/relgo/log"
+	"github.com/Vonmo/relgo/metrics"
+	"github.com/Vonmo/relgo/models"
 	"io/ioutil"
 	"os"
 	"os/signal"

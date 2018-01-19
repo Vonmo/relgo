@@ -8,8 +8,8 @@ package models
 import (
 	"time"
 
-	"github.com/elzor/relgo/log"
-	"github.com/elzor/relgo/metrics"
+	"github.com/Vonmo/relgo/log"
+	"github.com/Vonmo/relgo/metrics"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
 )

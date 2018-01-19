@@ -6,7 +6,7 @@
 package metrics
 
 import (
-	"github.com/elzor/relgo/log"
+	"github.com/Vonmo/relgo/log"
 	"io/ioutil"
 	"reflect"
 	"sort"

@@ -5,8 +5,8 @@
 package core
 
 import (
-	"github.com/elzor/relgo/config"
-	"github.com/elzor/relgo/metrics"
+	"github.com/Vonmo/relgo/config"
+	"github.com/Vonmo/relgo/metrics"
 	"github.com/gobuffalo/packr"
 	"os"
 	"sync"

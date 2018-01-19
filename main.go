@@ -6,9 +6,9 @@ package main
 
 import (
 	"flag"
-	"github.com/elzor/relgo/core"
-	"github.com/elzor/relgo/log"
-	"github.com/elzor/relgo/services"
+	"github.com/Vonmo/relgo/core"
+	"github.com/Vonmo/relgo/log"
+	"github.com/Vonmo/relgo/services"
 	"github.com/gobuffalo/packr"
 	"os"
 )

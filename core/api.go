@@ -6,7 +6,7 @@ package core
 
 import (
 	"fmt"
-	"github.com/elzor/relgo/config"
+	"github.com/Vonmo/relgo/config"
 	"time"
 )
 

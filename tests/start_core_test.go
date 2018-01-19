@@ -6,7 +6,7 @@
 package tests
 
 import (
-	"github.com/elzor/relgo/core"
+	"github.com/Vonmo/relgo/core"
 	"github.com/gobuffalo/packr"
 	"os"
 	"testing"
